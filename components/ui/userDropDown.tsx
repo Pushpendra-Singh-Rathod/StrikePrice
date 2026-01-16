@@ -13,6 +13,13 @@ import {
   DropdownMenuTrigger,
 } from "./dropdown-menu";
 
+/**
+ * Renders a user dropdown toggle showing the user's avatar and name, and a menu with account details and a Logout action.
+ *
+ * The Logout item navigates the user to the "/sign-in" route when selected.
+ *
+ * @returns A React element representing the user dropdown menu.
+ */
 function UserDropDown() {
   const router = useRouter();
 

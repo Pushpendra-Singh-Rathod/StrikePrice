@@ -2,6 +2,11 @@
 import { usePathname } from "next/navigation";
 import navItems from "../../lib/constants";
 
+/**
+ * Render a responsive list of navigation links from `navItems`, applying active styling to the link that matches the current pathname.
+ *
+ * @returns A JSX element containing the navigation list with the link whose `href` matches the current path styled as active.
+ */
 function NavItems() {
   let pathname = usePathname();
 

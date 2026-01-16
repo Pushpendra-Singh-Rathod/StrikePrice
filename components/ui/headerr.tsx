@@ -1,6 +1,11 @@
 import { UserDropDown } from "./userDropDown";
 import { NavItems } from "./navItems";
 
+/**
+ * Renders the top sticky header containing the brand logo, responsive navigation, and user dropdown.
+ *
+ * @returns The header JSX element for the page top bar.
+ */
 function Header() {
   return (
     <header className="sticky top-0 header ">
