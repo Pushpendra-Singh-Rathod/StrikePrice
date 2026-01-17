@@ -1,7 +1,7 @@
 "use client";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import navItems from "../../lib/constants";
+import { navItems } from "../../lib/constants";
 
 function NavItems() {
   const pathname = usePathname();
