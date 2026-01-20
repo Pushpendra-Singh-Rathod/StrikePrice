@@ -20,7 +20,7 @@ function Home() {
             className="custom-chart"
           />
         </div>
-        <div className="md-col-span xl:col-span-2">
+        <div className="md-col-span xl:col-span-2 ">
           <TradingViewWidget
             title="Stock HeatMap"
             ScriptUrl={`${Url}stock-heatmap.js`}
