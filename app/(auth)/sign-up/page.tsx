@@ -1,7 +1,7 @@
 "use client";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { Button } from "@/components/ui/button";
-import { InputField } from "@/components/ui/forms/inputFied";
+import { InputField } from "@/components/ui/forms/inputField";
 import { SelectField } from "@/components/ui/forms/selectField";
 import {
   emailRegex,
