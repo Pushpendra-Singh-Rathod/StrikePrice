@@ -12,11 +12,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             alt="Signalist Logo"
             width={140}
             height={32}
-            className="h-8 auto"
+            className="h-8 w-auto"
           ></Image>
         </Link>
 
-        <div className="pb-6 lg:pd-8 flex-1">{children}</div>
+        <div className="pb-6 lg:pb-8 flex-1">{children}</div>
       </section>
 
       <section className="auth-right-section">
@@ -29,7 +29,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="flex items-center justify-between">
             <div>
               <cite className="auth-testimonial-author">-Ethan-R.</cite>
-              <p className="max:md-text-xs text-gray-500">Retail Investor</p>
+              <p className="max-md:text-xs text-gray-500">Retail Investor</p>
             </div>
 
             <div className="flex items-center gap-0.5">
@@ -51,7 +51,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="flex-1 relative">
           <Image
             src="/assets/images/dashboard.png"
-            alt="dashbaord-preview"
+            alt="dashboard-preview"
             width={1440}
             height={1150}
             className="auth-dashboard-preview top-0 absolute"

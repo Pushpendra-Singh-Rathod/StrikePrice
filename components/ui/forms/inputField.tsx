@@ -22,7 +22,6 @@ function InputField({
         id={name}
         disabled={disabled}
         placeholder={placeholder}
-        value={value}
         className={`form-input disabled:opacity-50 disabled:cursor-not-allowed`}
         {...register(name, validation)}
       />

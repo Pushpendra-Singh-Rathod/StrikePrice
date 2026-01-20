@@ -1,7 +1,7 @@
 "use client";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { Button } from "@/components/ui/button";
-import { InputField } from "@/components/ui/forms/inputFied";
+import { InputField } from "@/components/ui/forms/inputField";
 import { FooterLink } from "@/components/ui/forms/footerLink";
 import { emailRegex } from "@/lib/constants";
 
@@ -9,7 +9,6 @@ function SignIn() {
   const {
     register,
     handleSubmit,
-    control,
     formState: { errors, isSubmitting },
   } = useForm<SignInFormData>({
     defaultValues: {
