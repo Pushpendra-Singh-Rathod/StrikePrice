@@ -11,8 +11,12 @@ import {
 } from "@/lib/constants";
 import { CountrySelectField } from "@/components/ui/forms/countrySelectField";
 import { FooterLink } from "@/components/ui/forms/footerLink";
+import { toast } from "sonner";
+import { signUpwithEmail } from "@/lib/actions/auth.action";
+import { useRouter } from "next/navigation";
 
 function SignUp() {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -30,11 +34,16 @@ function SignUp() {
     mode: "onBlur",
   });
 
-  const onSubmit = (data: SignUpFormData) => {
+  const onSubmit = async (data: SignUpFormData) => {
     try {
-      console.log(data);
+      const result = await signUpwithEmail(data);
+      if (result.success) router.push("/");
     } catch (error) {
-      console.log(error);
+      console.error(error);
+      toast.error("Sign Up Failed ", {
+        description:
+          error instanceof Error ? error.message : "Failed to Create Account",
+      });
     }
   };
 

@@ -1,7 +1,7 @@
 import { UserDropDown } from "./userDropDown";
 import { NavItems } from "./navItems";
 
-function Header() {
+function Header({ user }: { user: User }) {
   return (
     <header className="sticky top-0 header ">
       <div className="header-wrapper container">
@@ -18,7 +18,7 @@ function Header() {
         <nav className="hidden sm:block">
           <NavItems />
         </nav>
-        <UserDropDown />
+        <UserDropDown user={user}/>
       </div>
     </header>
   );
