@@ -12,15 +12,15 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "./dropdown-menu";
+import { SignOut } from "@/lib/actions/auth.action";
 
-function UserDropDown() {
+function UserDropDown({ user }: { user: User }) {
   const router = useRouter();
 
   const handleSignOut = async () => {
+    await SignOut();
     router.push("/sign-in");
   };
-
-  const user = { name: "Pushpendra", email: "example@gmail.com" };
 
   return (
     <DropdownMenu>

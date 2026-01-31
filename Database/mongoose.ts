@@ -31,4 +31,6 @@ export const connectToDatabase = async () => {
   }
 
   console.log(`Connected to Database ${MONGO_URL}`);
+
+  return cached.conn;
 };

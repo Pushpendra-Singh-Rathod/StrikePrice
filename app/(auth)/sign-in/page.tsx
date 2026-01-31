@@ -4,8 +4,12 @@ import { Button } from "@/components/ui/button";
 import { InputField } from "@/components/ui/forms/inputField";
 import { FooterLink } from "@/components/ui/forms/footerLink";
 import { emailRegex } from "@/lib/constants";
+import { useRouter } from "next/navigation";
+import { toast } from "sonner";
+import { signInwithEmail } from "@/lib/actions/auth.action";
 
 function SignIn() {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -18,11 +22,16 @@ function SignIn() {
     mode: "onBlur",
   });
 
-  const onSubmit = (data: SignInFormData) => {
+  const onSubmit = async (data: SignInFormData) => {
     try {
-      console.log(data);
+      const result = await signInwithEmail(data);
+      if (result.success) router.push("/");
     } catch (error) {
-      console.log(error);
+      console.error(error);
+      toast.error("Sign In Failed ", {
+        description:
+          error instanceof Error ? error.message : "Failed to Sihn In",
+      });
     }
   };
 
