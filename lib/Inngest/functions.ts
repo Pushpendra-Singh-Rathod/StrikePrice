@@ -86,7 +86,7 @@ export const sendDailyNewSummary = inngest.createFunction(
 
           perUser.push({ user, articles });
         } catch (error) {
-          console.error("daily-news Error:", user.email, error);
+          console.error("daily-news Error:", error);
           perUser.push({ user, articles: [] });
         }
       }
@@ -115,7 +115,7 @@ export const sendDailyNewSummary = inngest.createFunction(
 
         userNewsSummaries.push({ user, newsContent });
       } catch (error) {
-        console.error("Failed to Summarize news for:", user.email);
+        console.error("Failed to Summarize news for");
         userNewsSummaries.push({ user, newsContent: null });
       }
     }
